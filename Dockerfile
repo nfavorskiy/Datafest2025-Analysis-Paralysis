@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
     libssl-dev \
     zlib1g-dev && \
     pip install --upgrade pip && \
-    pip install jupyterlab pandas matplotlib numpy opencv-python opencv-python-headless && \
+    pip install jupyterlab pandas matplotlib numpy scikit-learn opencv-python opencv-python-headless && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Triton Python client via prebuilt wheel
