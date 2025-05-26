@@ -1,0 +1,13 @@
+services:
+  detectron2-counter:
+    build: .
+    ports:
+      - "8888:8888"
+    container_name: detectron2-counter
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - .:/app  # Mount current directory to /app in container
+    working_dir: /app
+    tty: true  # Keep terminal open
